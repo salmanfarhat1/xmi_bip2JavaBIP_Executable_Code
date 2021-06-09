@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.bliudze.me/simon/2021/01/compounds/">
+<Java_BIP_project>
+  <components name="Screen">
+    <states_link_to_State_Base state_name="Colour"/>
+    <states_link_to_State_Base state_name="High_Resolution"/>
+    <states_link_to_State_Base state_name="Basic"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Basic" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.2"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Colour" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_High_Resolution" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.1" in_connector_end="//@connector_motifs.0/@ends.1"/>
+  </components>
+  <components name="Mobile_Phone">
+    <states_link_to_State_Base state_name="Media"/>
+    <states_link_to_State_Base state_name="Calls"/>
+    <states_link_to_State_Base state_name="GPS"/>
+    <states_link_to_State_Base state_name="Screen"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_GPS" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.2"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Media" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Screen" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.3"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Calls" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.1"/>
+  </components>
+  <components name="Calls">
+    <states_link_to_State_Base state_name="Calls"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Calls" src="//@components.2/@initial_s" dst="//@components.2/@states_link_to_State_Base.0"/>
+  </components>
+  <components name="GPS">
+    <states_link_to_State_Base state_name="GPS"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_GPS" src="//@components.3/@initial_s" dst="//@components.3/@states_link_to_State_Base.0"/>
+  </components>
+  <components name="Media">
+    <states_link_to_State_Base state_name="MP3"/>
+    <states_link_to_State_Base state_name="Camera"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Camera" src="//@components.4/@initial_s" dst="//@components.4/@states_link_to_State_Base.1" in_connector_end="//@connector_motifs.0/@ends.0"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_MP3" src="//@components.4/@initial_s" dst="//@components.4/@states_link_to_State_Base.0"/>
+  </components>
+  <connector_motifs connector_id="init_to_Camera__________init_to_High_Resolution">
+    <ends xsi:type="Synchron" one_enforceable="//@components.4/@connectors.0" description="this is the port of the component: Media from state :init to state :Camera"/>
+    <ends xsi:type="Trigger" one_enforceable="//@components.0/@connectors.2" description="this is the port of the component: Screen from state :init to state :High_Resolution"/>
+  </connector_motifs>
+</Java_BIP_project>
+</xmi:XMI>

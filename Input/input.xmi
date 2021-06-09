@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.bliudze.me/simon/2021/01/compounds/">
+  <Java_BIP_project>
+    <components name="E">
+      <states_link_to_State_Base state_name="E"/>
+      <initial_s state_name="init"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_E" src="/0/@components.0/@initial_s" dst="/0/@components.0/@states_link_to_State_Base.0" in_connector_end="/0/@connector_motifs.0/@ends.1"/>
+    </components>
+    <components name="B">
+      <states_link_to_State_Base state_name="dsd"/>
+      <states_link_to_State_Base state_name="ss"/>
+      <initial_s state_name="init"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_dsd" src="/0/@components.1/@initial_s" dst="/0/@components.1/@states_link_to_State_Base.0"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_ss" src="/0/@components.1/@initial_s" dst="/0/@components.1/@states_link_to_State_Base.1"/>
+    </components>
+    <components name="C">
+      <states_link_to_State_Base state_name="C"/>
+      <initial_s state_name="init"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_C" src="/0/@components.2/@initial_s" dst="/0/@components.2/@states_link_to_State_Base.0" in_connector_end="/0/@connector_motifs.0/@ends.0"/>
+    </components>
+    <components name="A">
+      <states_link_to_State_Base state_name="E"/>
+      <states_link_to_State_Base state_name="C"/>
+      <states_link_to_State_Base state_name="D"/>
+      <states_link_to_State_Base state_name="B"/>
+      <initial_s state_name="init"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_B" src="/0/@components.3/@initial_s" dst="/0/@components.3/@states_link_to_State_Base.3"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_C" src="/0/@components.3/@initial_s" dst="/0/@components.3/@states_link_to_State_Base.1"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_D" src="/0/@components.3/@initial_s" dst="/0/@components.3/@states_link_to_State_Base.2"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_E" src="/0/@components.3/@initial_s" dst="/0/@components.3/@states_link_to_State_Base.0"/>
+    </components>
+    <components name="D">
+      <states_link_to_State_Base state_name="D"/>
+      <initial_s state_name="init"/>
+      <connectors xsi:type="Enforceable" transition_name="init_to_D" src="/0/@components.4/@initial_s" dst="/0/@components.4/@states_link_to_State_Base.0"/>
+    </components>
+    <connector_motifs connector_id="init_to_E___________init_to_C">
+      <ends xsi:type="Trigger" one_enforceable="/0/@components.2/@connectors.0" description="this is the port of the component: C from state :init to state :C"/>
+      <ends xsi:type="Synchron" one_enforceable="/0/@components.0/@connectors.0" description="this is the port of the component: E from state :init to state :E"/>
+    </connector_motifs>
+  </Java_BIP_project>
+  <Component name="Map {(IN!A, Sequence {OUT!&lt;unnamed>, OUT!&lt;unnamed>, OUT!&lt;unnamed>, OUT!&lt;unnamed>}), (IN!E, Sequence {OUT!&lt;unnamed>}), (IN!B, Sequence {OUT!&lt;unnamed>, OUT!&lt;unnamed>}), (IN!C, Sequence {OUT!&lt;unnamed>}), (IN!D, Sequence {OUT!&lt;unnamed>})}"/>
+</xmi:XMI>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.bliudze.me/simon/2021/01/compounds/">
+<Java_BIP_project>
+  <components name="Mobile_Phone" usableComponent="false">
+    <states_link_to_State_Base state_name="GPS"/>
+    <states_link_to_State_Base state_name="Media"/>
+    <states_link_to_State_Base state_name="Calls"/>
+    <states_link_to_State_Base state_name="Screen"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Calls" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.2"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Media" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.1"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Screen" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.3"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_GPS" src="//@components.0/@initial_s" dst="//@components.0/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="Calls_reset" src="//@components.0/@states_link_to_State_Base.2" dst="//@components.0/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="Media_reset" src="//@components.0/@states_link_to_State_Base.1" dst="//@components.0/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="Screen_reset" src="//@components.0/@states_link_to_State_Base.3" dst="//@components.0/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="GPS_reset" src="//@components.0/@states_link_to_State_Base.0" dst="//@components.0/@initial_s"/>
+  </components>
+  <components name="Screen" usableComponent="true">
+    <states_link_to_State_Base state_name="Basic"/>
+    <states_link_to_State_Base state_name="Colour"/>
+    <states_link_to_State_Base state_name="High_Resolution"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Basic" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.0" in_connector_end="//@connector_motifs.1/@ends.1"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Colour" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.1"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_High_Resolution" src="//@components.1/@initial_s" dst="//@components.1/@states_link_to_State_Base.2"/>
+    <connectors xsi:type="Enforceable" transition_name="Basic_reset" src="//@components.1/@states_link_to_State_Base.0" dst="//@components.1/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="Colour_reset" src="//@components.1/@states_link_to_State_Base.1" dst="//@components.1/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="High_Resolution_reset" src="//@components.1/@states_link_to_State_Base.2" dst="//@components.1/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="High_Resolution_to_High_Resolution" src="//@components.1/@states_link_to_State_Base.2" dst="//@components.1/@states_link_to_State_Base.2" in_connector_end="//@connector_motifs.0/@ends.1"/>
+    <guards name="Implies___srcComponent:Camera___dstComponnt:Screen" guardMethod="srcFeature:Camera___dstFeature:High_Resolution___srcTransition:init_to_Camera___dstTransition:High_Resolution_to_High_Resolution"/>
+    <guards name="Exclude___srcComponent:GPS___dstComponnt:Screen" guardMethod="srcFeature:GPS___dstFeature:Basic___srcTransition:init_to_GPS___dstTransition:init_to_Basic"/>
+  </components>
+  <components name="Camera" usableComponent="true">
+    <states_link_to_State_Base state_name="Camera"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Camera" src="//@components.2/@initial_s" dst="//@components.2/@states_link_to_State_Base.0" in_connector_end="//@connector_motifs.0/@ends.0"/>
+    <connectors xsi:type="Enforceable" transition_name="Camera_reset" src="//@components.2/@states_link_to_State_Base.0" dst="//@components.2/@initial_s"/>
+  </components>
+  <components name="MP3" usableComponent="true">
+    <states_link_to_State_Base state_name="MP3"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_MP3" src="//@components.3/@initial_s" dst="//@components.3/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="MP3_reset" src="//@components.3/@states_link_to_State_Base.0" dst="//@components.3/@initial_s"/>
+  </components>
+  <components name="Media" usableComponent="false">
+    <states_link_to_State_Base state_name="MP3"/>
+    <states_link_to_State_Base state_name="Camera"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Camera" src="//@components.4/@initial_s" dst="//@components.4/@states_link_to_State_Base.1"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_MP3" src="//@components.4/@initial_s" dst="//@components.4/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="Camera_reset" src="//@components.4/@states_link_to_State_Base.1" dst="//@components.4/@initial_s"/>
+    <connectors xsi:type="Enforceable" transition_name="MP3_reset" src="//@components.4/@states_link_to_State_Base.0" dst="//@components.4/@initial_s"/>
+  </components>
+  <components name="GPS" optional="true" usableComponent="true">
+    <states_link_to_State_Base state_name="GPS"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_GPS" src="//@components.5/@initial_s" dst="//@components.5/@states_link_to_State_Base.0" in_connector_end="//@connector_motifs.1/@ends.0"/>
+    <connectors xsi:type="Enforceable" transition_name="GPS_reset" src="//@components.5/@states_link_to_State_Base.0" dst="//@components.5/@initial_s"/>
+  </components>
+  <components name="Calls" usableComponent="true">
+    <states_link_to_State_Base state_name="Calls"/>
+    <initial_s state_name="init"/>
+    <connectors xsi:type="Enforceable" transition_name="init_to_Calls" src="//@components.6/@initial_s" dst="//@components.6/@states_link_to_State_Base.0"/>
+    <connectors xsi:type="Enforceable" transition_name="Calls_reset" src="//@components.6/@states_link_to_State_Base.0" dst="//@components.6/@initial_s"/>
+  </components>
+  <connector_motifs connector_id="Implies_init_to_Camera__________High_Resolution_to_High_Resolution">
+    <ends xsi:type="Synchron" one_enforceable="//@components.2/@connectors.0" description="this is the port of the component: Camera from state :init to state :Camera"/>
+    <ends xsi:type="Trigger" one_enforceable="//@components.1/@connectors.6" description="this is the port of the component: Screen from state :High_Resolution to state :High_Resolution"/>
+  </connector_motifs>
+  <connector_motifs connector_id="Exclude_init_to_GPS__________init_to_Basic">
+    <ends xsi:type="Synchron" one_enforceable="//@components.5/@connectors.0" description="I don't create a motif but I leave it now for future decision "/>
+    <ends xsi:type="Trigger" one_enforceable="//@components.1/@connectors.0" description="I don't create a motif but I leave it now for future decision "/>
+  </connector_motifs>
+</Java_BIP_project>
+</xmi:XMI>

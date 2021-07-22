@@ -1,0 +1,31 @@
+package Output;
+public class Main_Controller_ports{
+	public static final String Main_Controller_p_Spon_init_to_SBasic = "Main_Controller_p_Spon_init_to_SBasic";
+	public static final String Main_Controller_p_Spon_init_to_SColour = "Main_Controller_p_Spon_init_to_SColour";
+	public static final String Main_Controller_p_Spon_init_to_SHigh_Resolution = "Main_Controller_p_Spon_init_to_SHigh_Resolution";
+	public static final String Main_Controller_p_Spon_init_to_SCamera = "Main_Controller_p_Spon_init_to_SCamera";
+	public static final String Main_Controller_p_Spon_init_to_SMP3 = "Main_Controller_p_Spon_init_to_SMP3";
+	public static final String Main_Controller_p_Spon_init_to_SGPS = "Main_Controller_p_Spon_init_to_SGPS";
+	public static final String Main_Controller_p_Spon_init_to_SCalls = "Main_Controller_p_Spon_init_to_SCalls";
+	public static final String Main_Controller_p_SBasic_to_init = "Main_Controller_p_SBasic_to_init";
+	public static final String Main_Controller_p_SColour_to_init = "Main_Controller_p_SColour_to_init";
+	public static final String Main_Controller_p_SHigh_Resolution_to_init = "Main_Controller_p_SHigh_Resolution_to_init";
+	public static final String Main_Controller_p_SCamera_to_init = "Main_Controller_p_SCamera_to_init";
+	public static final String Main_Controller_p_SMP3_to_init = "Main_Controller_p_SMP3_to_init";
+	public static final String Main_Controller_p_SGPS_to_init = "Main_Controller_p_SGPS_to_init";
+	public static final String Main_Controller_p_SCalls_to_init = "Main_Controller_p_SCalls_to_init";
+	public static final String Main_Controller_p_Spon_init_to_RBasic = "Main_Controller_p_Spon_init_to_RBasic";
+	public static final String Main_Controller_p_Spon_init_to_RColour = "Main_Controller_p_Spon_init_to_RColour";
+	public static final String Main_Controller_p_Spon_init_to_RHigh_Resolution = "Main_Controller_p_Spon_init_to_RHigh_Resolution";
+	public static final String Main_Controller_p_Spon_init_to_RCamera = "Main_Controller_p_Spon_init_to_RCamera";
+	public static final String Main_Controller_p_Spon_init_to_RMP3 = "Main_Controller_p_Spon_init_to_RMP3";
+	public static final String Main_Controller_p_Spon_init_to_RGPS = "Main_Controller_p_Spon_init_to_RGPS";
+	public static final String Main_Controller_p_Spon_init_to_RCalls = "Main_Controller_p_Spon_init_to_RCalls";
+	public static final String Main_Controller_p_RBasic_to_init = "Main_Controller_p_RBasic_to_init";
+	public static final String Main_Controller_p_RColour_to_init = "Main_Controller_p_RColour_to_init";
+	public static final String Main_Controller_p_RHigh_Resolution_to_init = "Main_Controller_p_RHigh_Resolution_to_init";
+	public static final String Main_Controller_p_RCamera_to_init = "Main_Controller_p_RCamera_to_init";
+	public static final String Main_Controller_p_RMP3_to_init = "Main_Controller_p_RMP3_to_init";
+	public static final String Main_Controller_p_RGPS_to_init = "Main_Controller_p_RGPS_to_init";
+	public static final String Main_Controller_p_RCalls_to_init = "Main_Controller_p_RCalls_to_init";
+}

@@ -15,10 +15,12 @@ public class Transition {
 		this.componentOfTheTransition = componentOfTheTransition;
 	}
 
-	public Transition(String transition_name, State src, State dst) {
+	public Transition(String transition_name, State src, State dst,  Boolean synchron ,Component componentOfTheTransition  ) {
 		this.transition_name = transition_name;
 		this.src = src;
 		this.dst = dst;
+		this.componentOfTheTransition = componentOfTheTransition;
+		this.synchron = synchron;
 	}
 
 	@Override

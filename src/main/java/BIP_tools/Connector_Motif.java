@@ -10,7 +10,10 @@ public class Connector_Motif {
 		this.connector_id = id;
 		this.relationsList = new ArrayList<Transition>();
 	}
-
+	public void addEnd(Transition t) {
+		
+		relationsList.add(t);
+	}
 	public String getConnector_id() {
 		return connector_id;
 	}
@@ -25,7 +28,14 @@ public class Connector_Motif {
 
 	@Override
 	public String toString() {
-		return "\n\nConnector_Motif \n[\nconnector_id=" + connector_id + "\nRelationsList=" + relationsList + "\n]";
+		String S = "\n[\nMotif: connector_id=" + connector_id + "\n\tPorts Engaged in the connector: \n\t{\n"; 
+		for(int i = 0 ; i < relationsList.size(); i++) {
+			S += relationsList.get(i).toString();
+		}
+		S +="\t}";
+		return S;
+				
+				//"\n[\nMotif: connector_id=" + connector_id + "\nPorts Engaged in the connector: \n{\n" + relationsList + "\n}";
 	}
 
 	public void setRelationsList(ArrayList<Transition> relationsList) {
